@@ -18,18 +18,20 @@ def e_fibonacci(numero_buscado: int) -> bool:
     return False
 
 
-mensagem_entrada = 'Digite um número para verificar se está na sequência de Fibonacci, ou digite "S" para Sair: \n'
+if __name__ == '__main__':
+    mensagem_entrada = 'Digite um número para verificar se está na sequência de Fibonacci, ou digite "S" para Sair: \n'
 
-numero = input(mensagem_entrada)
+    numero = input(mensagem_entrada)
 
-while numero.lower() != 's':
-    try:
-        if e_fibonacci(numero_buscado=int(numero)):
-            print(f'O número {numero} pertence à sequência de Fibonacci.')
+    while numero.lower() != 's':
+        try:
+            if e_fibonacci(numero_buscado=int(numero)):
+                print(f'O número {numero} pertence à sequência de Fibonacci.')
+                numero = input(mensagem_entrada)
+            else:
+                print(f'O número {numero} não pertence à sequência de Fibonacci.')
+                numero = input(mensagem_entrada)
+        except:
+            print(f'A entrada precisa ser um número inteiro')
             numero = input(mensagem_entrada)
-        else:
-            print(f'O número {numero} não pertence à sequência de Fibonacci.')
-            numero = input(mensagem_entrada)
-    except:
-        print(f'A entrada precisa ser um número inteiro')
-        numero = input(mensagem_entrada)
+
