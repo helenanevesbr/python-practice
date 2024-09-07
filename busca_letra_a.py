@@ -1,8 +1,10 @@
+import re
+
 def contagem_letra_a(texto:str)->int:
-    return sum(1 for letra in texto if letra.lower() == 'a')
+    return len(re.findall(r'[AaÁáÂâÃãÀà]', texto))
 
 
-mensagem_entrada = 'Digite uma texto, ou digite "S" para Sair: \n'
+mensagem_entrada = 'Digite um texto, ou digite "S" para Sair: \n'
 
 texto = input(mensagem_entrada)
 
