@@ -1,6 +1,8 @@
 import re
 
 def contagem_letra_a(texto:str)->int:
+    ''' Conta a ocorrência da letra A em um texto '''
+    
     return len(re.findall(r'[AaÁáÂâÃãÀà]', texto))
 
 if __name__ == '__main__':
