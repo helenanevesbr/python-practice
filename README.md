@@ -1,6 +1,6 @@
-# Code Test da Target Sistemas
+# Code Test
 
-Os scripts de python abaixo foram submetidos a minha candidatura à vaga de estágio na Target Sistemas.
+Os scripts de python abaixo testam minha habilidade em python
 
 ## Executando os scripts
 
